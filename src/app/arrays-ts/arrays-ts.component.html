@@ -1,0 +1,26 @@
+<h1>Arrays con ts</h1>
+<h3>Mostrar el array</h3>
+<p>Mostrar los contenidos del array</p>
+<button (click)="muestraArray()">Mostrar</button>
+
+<h3>Añadir elemento al array</h3>
+<p>Añadir un elemento al final del array <input type="text" [(ngModel)]="nuevaPalabra"></p>
+<button (click)="anadepalabra()">Añadir</button>
+
+<h3>Eliminar elemento del array</h3>
+<p>Eliminar un elemento al final del array <button (click)="eliminapalabra()">Eliminar</button></p>
+
+<h3>Modificar un elemento del array</h3>
+<p>Modificar un elemento del array. Recordar que el array empieza en el valor 0</p>
+<p>Posicion en el array <input type="text" [(ngModel)]="indice"></p>
+<p>Palabra que va a sustituir la del array <input type="text" [(ngModel)]="nuevaPalabra"></p>
+<button (click)="modArray()">Modificar</button>
+
+<h3>Ordenar el array</h3>
+<p>Ordenar el array</p>
+<button (click)="ordenarArray()">Ordenar</button>
+<p>Como no le hemos pasado ningun parametro, al ser un array de strings se ordenara alfabeticamente</p>
+
+{{showArray}}
+
+<hr>

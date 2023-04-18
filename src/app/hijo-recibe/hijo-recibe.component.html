@@ -1,0 +1,17 @@
+<h1>Lista Hijo</h1>
+<table>
+    <thead>
+        <th>nombre</th>
+        <th>apellido</th>
+        <th>cedula</th>
+        <th>foto</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of lHijo">
+            <td>{{item.nombre}}</td>
+            <td>{{item.apellidos}}</td>
+            <td>{{item.cedula}}</td>
+            <td>{{item.foto}}</td>
+        </tr>
+    </tbody>
+</table>

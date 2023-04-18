@@ -1,0 +1,36 @@
+<h1>Directivas Angular</h1>
+<h3>ngIfElse</h3>
+<p>Al pulsar el boton de abajo aparecera un parrafo y desaparecera el otro</p>
+<button (click)="cambiaIf()">Cambiar</button>
+<p *ngIf="boolIf;else ParrafoElse">Este parrafo se muestra cuando la condicion es true</p>
+<ng-template #ParrafoElse><p>Este parrafo se muestra cuando la condicion es false</p>
+    <p>Se utiliza ng-template para mostrar el parrafo a false</p> 
+</ng-template>
+
+
+<h3>ngFor</h3>
+<p>Esta tabla ha sido rellenada con los valores de una constante</p>
+<table>
+    <thead>
+        <th>Index</th>
+        <th>Nombre</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehiculo of vehiculos; let i = index">
+            <td>{{i}}</td>
+            <td>{{vehiculo.name}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>ngSwitch</h3>
+<p>Escribe un numero para cambiar el contenido del parrafo de abajo: <input type="number" [(ngModel)]="num"></p>
+<button (click)="cambiaSwitch()">Cambiar</button>
+<div [ngSwitch]=comprueba>
+    <p *ngSwitchCase="0">Este parrafo se muestra cuando el valor es 0</p>
+    <p *ngSwitchCase="1">Este parrafo se muestra cuando el valor es 1</p>
+    <p *ngSwitchCase="2">Este parrafo se muestra cuando el valor es 2</p>
+    <p *ngSwitchCase="3">Este parrafo se muestra cuando el valor es 3</p>
+    <p *ngSwitchDefault>Este parrafo se muestra cuando el valor es distinto de 0 1 2 3</p>
+</div>
+

@@ -1,0 +1,7 @@
+<h1>Medico</h1>
+<p>Nombre: <input type="text" [(ngModel)]="nombre"></p>
+<p>Apellidos: <input type="text" [(ngModel)]="apellidos"></p>
+<p>Cedula: <input type="number" [(ngModel)]="cedula"></p>
+<p>Foto: <input type="text" [(ngModel)]="foto"></p>
+<button (click)="anadir()">Confirmar</button>
+<app-hijo-recibe [lHijo]="lista"></app-hijo-recibe>

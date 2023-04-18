@@ -1,0 +1,24 @@
+<h1>Lista Padre</h1>
+<table>
+    <thead>
+        <th>id</th>
+        <th>nombre</th>
+        <th>apellidos</th>
+        <th>dni</th>
+        <th>telefono</th>
+        <th>direccion</th>
+        <th>correo</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of lPadre">
+            <td>{{item.id}}</td>
+            <td>{{item.nombre}}</td>
+            <td>{{item.apellidos}}</td>
+            <td>{{item.dni}}</td>
+            <td>{{item.telefono}}</td>
+            <td>{{item.direccion}}</td>
+            <td>{{item.correo}}</td>
+        </tr>
+    </tbody>
+</table>
+<app-hijo-envia (Ingreso)="recibeDatos($event)"></app-hijo-envia>
